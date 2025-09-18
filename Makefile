@@ -14,10 +14,10 @@ SOURCES = $(wildcard *.c)
 OBJECTS = $(SOURCES:.c=.o)
 
 $(EXEC): $(OBJECTS)
-        $(CC) $(OBJECTS) -o $(EXEC)
+	$(CC) $(OBJECTS) -o $(EXEC)
 
 %.o: %.c
-        $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-        rm -f $(EXEC) $(OBJECTS)
+	rm -f $(EXEC) $(OBJECTS)
